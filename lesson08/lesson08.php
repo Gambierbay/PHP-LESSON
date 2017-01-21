@@ -1,13 +1,13 @@
 <?php
 /**
- * Lesson08 ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”‚ğintŒ^‚Ö•ÏŠ·‚µ‚Ä”z—ñ‚Ö’Ç‰Á‚µAƒoƒuƒ‹ƒ\[ƒgÀ{‚ÌŒão—Í‚·‚éƒvƒƒOƒ‰ƒ€B
+ * Lesson08 ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°ã‚’intå‹ã¸å¤‰æ›ã—ã¦é…åˆ—ã¸è¿½åŠ ã—ã€ãƒãƒ–ãƒ«ã‚½ãƒ¼ãƒˆå®Ÿæ–½ã®å¾Œå‡ºåŠ›ã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã€‚
  *
  * @author	manabe hiroki
  */
 
 
 /**
- * intŒ^‚É•ÏŠ·‚µ‚½ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”‚ğŠi”[‚·‚é”z—ñB
+ * intå‹ã«å¤‰æ›ã—ãŸã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°ã‚’æ ¼ç´ã™ã‚‹é…åˆ—ã€‚
  *
  * @var Array[int] $integers
  */
@@ -16,11 +16,11 @@ $integers = array();
 
 for($i=1;$i<count($argv);$i++){
 	try {
-		if(ctype_digit($argv[$i]) == false) {
-			throw new Exception('•¶š—ñ‚Í“ü—Í‚µ‚È‚¢‚Å‰º‚³‚¢');
+		if(is_numeric($argv[$i]) == false) {
+			throw new Exception('æ–‡å­—åˆ—ã¯å…¥åŠ›ã—ãªã„ã§ä¸‹ã•ã„');
 		}
 	} catch (Exception $e) {
-		echo "ƒGƒ‰[:".$e->getMessage();
+		echo "ã‚¨ãƒ©ãƒ¼:".$e->getMessage();
 		continue;
 	}
 	array_push($integers,intval($argv[$i]));
@@ -39,9 +39,9 @@ for($end = count($integers)-1; $end > 0; $end--) {
 outData($integers);
 
 /**
- * outData —^‚¦‚ç‚ê‚½”—ñ‚Ì“à—e‚ğ‘S‚Ä•\¦‚·‚éŠÖ”B
+ * outData ä¸ãˆã‚‰ã‚ŒãŸæ•°åˆ—ã®å†…å®¹ã‚’å…¨ã¦è¡¨ç¤ºã™ã‚‹é–¢æ•°ã€‚
  *
- * @param	Array[int] $argArray “à—e‚ğ•\¦‚·‚é®”—ñ
+ * @param	Array[int] $argArray å†…å®¹ã‚’è¡¨ç¤ºã™ã‚‹æ•´æ•°åˆ—
  * @return	void
  * @author	manabe hiroki
  */
